@@ -1,0 +1,30 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Random rnd = new Random();
+        int secret = rnd.Next(1, 101);
+        int guess;
+        bool win = false;
+
+        for (int i = 1; i <= 5; i++)
+        {
+            Console.Write($"Cəhd {i}: 1-100 arası təxmin et: ");
+            guess = int.Parse(Console.ReadLine());
+
+            if (guess == secret)
+            {
+                win = true;
+                break;
+            }
+            else if (guess < secret)
+                Console.WriteLine("Daha böyük rəqəm daxil edin.");
+            else
+                Console.WriteLine("Daha kiçik rəqəm daxil edin.");
+        }
+
+        Console.WriteLine(win ? "Təbriklər! Tapdınız!" : $"Təəssüf! Doğru rəqəm: {secret}");
+    }
+}
