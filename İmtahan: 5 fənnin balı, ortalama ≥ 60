@@ -1,0 +1,19 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double sum = 0;
+
+        for (int i = 1; i <= 5; i++)
+        {
+            Console.Write($"{i}-ci fənnin balı: ");
+            sum += double.Parse(Console.ReadLine());
+        }
+
+        double avg = sum / 5;
+
+        Console.WriteLine(avg >= 60 ? "Keçdiniz!" : "Keçə bilmədiniz!");
+    }
+}
