@@ -1,0 +1,41 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Tam ədəd daxil edin: ");
+        string input = Console.ReadLine();
+        int num;
+
+        // İstifadəçi daxil etməsini yoxlamaq
+        bool success = int.TryParse(input, out num);
+        if (!success)
+        {
+            Console.WriteLine("Düzgün tam ədəd daxil edilməyib!");
+            return;
+        }
+
+        // Ədədin kateqoriyalaşdırılması
+        if (num < 0)
+        {
+            Console.WriteLine("Ədəd mənfidir.");
+        }
+        else if (num == 0)
+        {
+            Console.WriteLine("Ədəd sıfırdır.");
+        }
+        else // num > 0
+        {
+            // Müsbət ədədin alt kateqoriyası
+            if (num < 100)
+            {
+                Console.WriteLine("Ədəd müsbət və kiçikdir.");
+            }
+            else
+            {
+                Console.WriteLine("Ədəd müsbət və böyükdür.");
+            }
+        }
+    }
+}
