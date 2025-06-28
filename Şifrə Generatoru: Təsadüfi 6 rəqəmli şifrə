@@ -1,0 +1,17 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Random rnd = new Random();
+        string password = "";
+
+        for (int i = 0; i < 6; i++)
+        {
+            password += rnd.Next(0, 10);
+        }
+
+        Console.WriteLine($"Təsadüfi şifrə: {password}");
+    }
+}
