@@ -1,0 +1,33 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Yemək seçin:");
+        Console.WriteLine("1) Pizza");
+        Console.WriteLine("2) Burger");
+        Console.WriteLine("3) Salat");
+        Console.WriteLine("4) Kebab");
+        Console.WriteLine("5) Şorba");
+
+        Console.Write("Seçiminizi daxil edin (1-5): ");
+        int choice = int.Parse(Console.ReadLine());
+
+        int calories = 0;
+
+        switch (choice)
+        {
+            case 1: calories = 800; break;
+            case 2: calories = 600; break;
+            case 3: calories = 300; break;
+            case 4: calories = 700; break;
+            case 5: calories = 200; break;
+            default:
+                Console.WriteLine("Yanlış seçim!");
+                return;
+        }
+
+        Console.WriteLine($"Seçilmiş yeməyin kalorisi: {calories} kcal");
+    }
+}
