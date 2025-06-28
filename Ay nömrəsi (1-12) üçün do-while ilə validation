@@ -1,0 +1,17 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int month;
+
+        do
+        {
+            Console.Write("Ay nömrəsini daxil edin (1-12): ");
+            month = int.Parse(Console.ReadLine());
+        } while (month < 1 || month > 12);
+
+        Console.WriteLine($"Daxil etdiyiniz ay: {month}");
+    }
+}
