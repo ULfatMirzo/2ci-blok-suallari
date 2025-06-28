@@ -1,0 +1,21 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Əmanət məbləğini daxil edin: ");
+        double deposit = double.Parse(Console.ReadLine());
+
+        Console.Write("Müddət (ay): ");
+        int months = int.Parse(Console.ReadLine());
+
+        Console.Write("Faiz (% illik): ");
+        double annualRate = double.Parse(Console.ReadLine());
+
+        double monthlyRate = annualRate / 12 / 100;
+        double monthlyIncome = deposit * monthlyRate;
+
+        Console.WriteLine($"Aylıq faiz gəliri: {monthlyIncome:F2} AZN");
+    }
+}
