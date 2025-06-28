@@ -1,0 +1,17 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Temperaturu daxil edin (°C): ");
+        double temp = double.Parse(Console.ReadLine());
+
+        if (temp < 0)
+            Console.WriteLine("Soyuq");
+        else if (temp > 30)
+            Console.WriteLine("Çox isti");
+        else
+            Console.WriteLine("Normal hava");
+    }
+}
