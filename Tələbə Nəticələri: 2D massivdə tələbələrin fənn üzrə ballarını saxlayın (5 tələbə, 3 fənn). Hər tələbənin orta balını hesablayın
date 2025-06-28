@@ -1,0 +1,27 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double[,] scores = {
+            { 80, 90, 70 },
+            { 85, 75, 95 },
+            { 60, 70, 65 },
+            { 90, 88, 92 },
+            { 78, 82, 80 }
+        };
+
+        for (int student = 0; student < scores.GetLength(0); student++)
+        {
+            double sum = 0;
+            for (int subject = 0; subject < scores.GetLength(1); subject++)
+            {
+                sum += scores[student, subject];
+            }
+
+            double average = sum / scores.GetLength(1);
+            Console.WriteLine($"Tələbə {student + 1} - Orta bal: {average:F2}");
+        }
+    }
+}
