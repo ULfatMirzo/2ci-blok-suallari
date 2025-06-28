@@ -1,0 +1,21 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double price = 200; // Tutaq ki, biletin qiyməti 200 AZN
+
+        Console.Write("Status seçin (işçi/tələbə): ");
+        string status = Console.ReadLine().ToLower();
+
+        if (status == "tələbə")
+        {
+            double discount = price * 0.2;
+            price -= discount;
+            Console.WriteLine($"Tələbə endirimi: -{discount:F2} AZN");
+        }
+
+        Console.WriteLine($"Ödəniləcək məbləğ: {price:F2} AZN");
+    }
+}
