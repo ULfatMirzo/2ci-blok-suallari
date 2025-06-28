@@ -1,0 +1,27 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("AZN məbləğini daxil edin: ");
+        double azn = double.Parse(Console.ReadLine());
+
+        Console.Write("Valyuta seçin (USD/EUR): ");
+        string currency = Console.ReadLine().ToUpper();
+
+        double result = 0;
+
+        if (currency == "USD")
+            result = azn / 1.7;  // Məsələn, 1 USD = 1.7 AZN
+        else if (currency == "EUR")
+            result = azn / 1.85; // Məsələn, 1 EUR = 1.85 AZN
+        else
+        {
+            Console.WriteLine("Yanlış valyuta!");
+            return;
+        }
+
+        Console.WriteLine($"{azn} AZN = {result:F2} {currency}");
+    }
+}
