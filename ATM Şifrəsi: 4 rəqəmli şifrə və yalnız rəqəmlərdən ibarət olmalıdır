@@ -1,0 +1,15 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("4 rəqəmli şifrə daxil edin: ");
+        string pin = Console.ReadLine();
+
+        if (pin.Length == 4 && int.TryParse(pin, out _))
+            Console.WriteLine("Şifrə qəbul edildi.");
+        else
+            Console.WriteLine("Yanlış format! Yalnız 4 rəqəm olmalıdır.");
+    }
+}
