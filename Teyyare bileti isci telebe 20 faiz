@@ -4,18 +4,44 @@ class Program
 {
     static void Main()
     {
-        double price = 200; // Tutaq ki, biletin qiyməti 200 AZN
+        Console.WriteLine("Marşrut seçin:");
+        Console.WriteLine("1) Bakı–Moskva (400 AZN)");
+        Console.WriteLine("2) Bakı–İstanbul (300 AZN)");
+        Console.WriteLine("3) Bakı–London (700 AZN)");
+        Console.Write("Seçiminizi daxil edin (1-3): ");
 
-        Console.Write("Status seçin (işçi/tələbə): ");
+        int route = int.Parse(Console.ReadLine());
+        double price = 0;
+
+        switch (route)
+        {
+            case 1:
+                price = 400;
+                break;
+            case 2:
+                price = 300;
+                break;
+            case 3:
+                price = 700;
+                break;
+            default:
+                Console.WriteLine("Yanlış seçim!");
+                return;
+        }
+
+        Console.WriteLine($"Seçilmiş biletin qiyməti: {price} AZN");
+
+        Console.Write("Statusunuzu daxil edin (işçi/tələbə): ");
         string status = Console.ReadLine().ToLower();
 
         if (status == "tələbə")
         {
             double discount = price * 0.2;
             price -= discount;
-            Console.WriteLine($"Tələbə endirimi: -{discount:F2} AZN");
+            Console.WriteLine($"Tələbə endirimi tətbiq olundu: -{discount:F2} AZN");
         }
 
-        Console.WriteLine($"Ödəniləcək məbləğ: {price:F2} AZN");
+        Console.WriteLine($"Ödəniləcək yekun məbləğ: {price:F2} AZN");
     }
 }
+
