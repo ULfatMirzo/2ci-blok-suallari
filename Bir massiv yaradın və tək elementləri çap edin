@@ -1,0 +1,16 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int[] arr = { 10, 15, 22, 33, 44, 55, 60 };
+
+        Console.WriteLine("Massivdəki tək ədədlər:");
+        foreach (int num in arr)
+        {
+            if (num % 2 != 0)
+                Console.WriteLine(num);
+        }
+    }
+}
