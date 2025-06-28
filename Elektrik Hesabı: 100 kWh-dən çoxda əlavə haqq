@@ -1,0 +1,27 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Aylıq istifadə (kWh): ");
+        double usage = double.Parse(Console.ReadLine());
+
+        double basePrice = 5;    // İlk 100 kWh üçün sabit haqq
+        double extraPricePerKwh = 0.2;
+
+        double totalPrice;
+
+        if (usage <= 100)
+        {
+            totalPrice = basePrice;
+        }
+        else
+        {
+            double extraUsage = usage - 100;
+            totalPrice = basePrice + extraUsage * extraPricePerKwh;
+        }
+
+        Console.WriteLine($"Ümumi elektrik haqqı: {totalPrice:F2} AZN");
+    }
+}
