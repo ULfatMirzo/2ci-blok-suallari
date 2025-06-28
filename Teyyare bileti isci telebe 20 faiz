@@ -29,19 +29,26 @@ class Program
                 return;
         }
 
-        Console.WriteLine($"Seçilmiş biletin qiyməti: {price} AZN");
+        Console.WriteLine($"Seçilmiş marşrutun qiyməti: {price:F2} AZN");
 
-        Console.Write("Statusunuzu daxil edin (işçi/tələbə): ");
-        string status = Console.ReadLine().ToLower();
+        Console.Write("Statusunuzu daxil edin (worker/student): ");
+        string status = Console.ReadLine().Trim().ToLower();
 
-        if (status == "tələbə")
+        if (status == "student" || status == "student")
         {
             double discount = price * 0.2;
             price -= discount;
-            Console.WriteLine($"Tələbə endirimi tətbiq olundu: -{discount:F2} AZN");
+            Console.WriteLine($"Tələbə endirimi: -{discount:F2} AZN");
+        }
+        else if (status == "worker" || status == "worker")
+        {
+            Console.WriteLine("Endirim yoxdur.");
+        }
+        else
+        {
+            Console.WriteLine("Status düzgün deyil! Endirim yoxdur.");
         }
 
-        Console.WriteLine($"Ödəniləcək yekun məbləğ: {price:F2} AZN");
+        Console.WriteLine($"Ödəniləcək məbləğ: {price:F2} AZN");
     }
 }
-
