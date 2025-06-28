@@ -1,0 +1,19 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Parkda qaldığınız saat sayı: ");
+        int hours = int.Parse(Console.ReadLine());
+
+        double price = 0;
+
+        if (hours <= 1)
+            price = 0;
+        else
+            price = (hours - 1) * 1; // İlk 1 saat pulsuz
+
+        Console.WriteLine($"Park ödənişi: {price:F2} AZN");
+    }
+}
