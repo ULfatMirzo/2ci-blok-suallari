@@ -1,0 +1,28 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int[,] matrix = new int[3, 3];
+        Random rand = new Random();
+
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                matrix[i, j] = rand.Next(1, 101); // 1-dən 100-ə qədər təsadüfi ədəd
+            }
+        }
+
+        Console.WriteLine("Təsadüfi 3x3 matris:");
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                Console.Write(matrix[i, j] + "\t");
+            }
+            Console.WriteLine();
+        }
+    }
+}
