@@ -1,0 +1,19 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Adınızı daxil edin: ");
+        string name = Console.ReadLine();
+
+        string password;
+        do
+        {
+            Console.Write("Parolu daxil edin (ən az 8 simvol): ");
+            password = Console.ReadLine();
+        } while (password.Length < 8);
+
+        Console.WriteLine($"Salam, {name}!");
+    }
+}
