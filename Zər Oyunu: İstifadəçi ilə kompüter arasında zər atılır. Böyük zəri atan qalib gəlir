@@ -1,0 +1,21 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Random rnd = new Random();
+        int userDice = rnd.Next(1, 7);
+        int computerDice = rnd.Next(1, 7);
+
+        Console.WriteLine($"Sizin zər: {userDice}");
+        Console.WriteLine($"Kompüterin zəri: {computerDice}");
+
+        if (userDice > computerDice)
+            Console.WriteLine("Siz qalib gəldiniz!");
+        else if (userDice < computerDice)
+            Console.WriteLine("Kompüter qalib gəldi!");
+        else
+            Console.WriteLine("Bərabərə!");
+    }
+}
