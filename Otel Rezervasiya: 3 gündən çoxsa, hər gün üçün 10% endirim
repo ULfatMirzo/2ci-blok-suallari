@@ -1,0 +1,22 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Qalacağınız gün sayı: ");
+        int days = int.Parse(Console.ReadLine());
+
+        double dailyPrice = 50;
+        double total = days * dailyPrice;
+
+        if (days > 3)
+        {
+            double discount = total * 0.1;
+            total -= discount;
+            Console.WriteLine($"Endirim: -{discount:F2} AZN");
+        }
+
+        Console.WriteLine($"Ümumi məbləğ: {total:F2} AZN");
+    }
+}
