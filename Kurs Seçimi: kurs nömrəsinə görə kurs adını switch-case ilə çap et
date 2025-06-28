@@ -1,0 +1,32 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Kurs nömrəsini daxil edin (1-5): ");
+        int course = int.Parse(Console.ReadLine());
+
+        switch (course)
+        {
+            case 1:
+                Console.WriteLine("Kurs: Proqramlaşdırma");
+                break;
+            case 2:
+                Console.WriteLine("Kurs: Veb Dizayn");
+                break;
+            case 3:
+                Console.WriteLine("Kurs: Şəbəkə");
+                break;
+            case 4:
+                Console.WriteLine("Kurs: Məlumat Bazasının İdarə Edilməsi");
+                break;
+            case 5:
+                Console.WriteLine("Kurs: Süni İntellekt");
+                break;
+            default:
+                Console.WriteLine("Belə kurs yoxdur!");
+                break;
+        }
+    }
+}
