@@ -1,0 +1,21 @@
+using System;
+using System.Linq;
+
+class Program
+{
+    static void PrintTop3Prices(int[] prices)
+    {
+        var top3 = prices.OrderByDescending(p => p).Take(3);
+        Console.WriteLine("Ən bahalı 3 məhsulun qiyməti:");
+        foreach (var price in top3)
+        {
+            Console.WriteLine(price);
+        }
+    }
+
+    static void Main()
+    {
+        int[] productPrices = { 100, 250, 80, 500, 320, 150 };
+        PrintTop3Prices(productPrices);
+    }
+}
