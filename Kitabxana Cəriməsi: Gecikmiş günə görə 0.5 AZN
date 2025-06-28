@@ -1,0 +1,20 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Gecikmiş gün sayı: ");
+        int daysLate = int.Parse(Console.ReadLine());
+
+        double fine = 0;
+
+        if (daysLate > 30)
+        {
+            int chargeableDays = daysLate - 30;
+            fine = chargeableDays * 0.5;
+        }
+
+        Console.WriteLine($"Ümumi cərimə: {fine:F2} AZN");
+    }
+}
