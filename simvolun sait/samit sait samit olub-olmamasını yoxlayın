@@ -1,0 +1,18 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Simvol daxil edin: ");
+        char ch = Char.ToLower(Console.ReadKey().KeyChar);
+        Console.WriteLine();
+
+        if ("aeiouəıöü".Contains(ch))
+            Console.WriteLine("Saitdir.");
+        else if (char.IsLetter(ch))
+            Console.WriteLine("Samitdir.");
+        else
+            Console.WriteLine("Hərf deyil.");
+    }
+}
