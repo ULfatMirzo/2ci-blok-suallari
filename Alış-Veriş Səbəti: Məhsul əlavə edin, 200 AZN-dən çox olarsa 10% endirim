@@ -1,0 +1,33 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double total = 0;
+        string cont;
+
+        do
+        {
+            Console.Write("Məhsul qiyməti: ");
+            double price = double.Parse(Console.ReadLine());
+
+            Console.Write("Məhsul sayı: ");
+            int qty = int.Parse(Console.ReadLine());
+
+            total += price * qty;
+
+            Console.Write("Davam etmək istəyirsiniz? (bəli/xeyr): ");
+            cont = Console.ReadLine().ToLower();
+        } while (cont == "bəli");
+
+        if (total > 200)
+        {
+            double discount = total * 0.1;
+            total -= discount;
+            Console.WriteLine($"10% endirim tətbiq olundu: -{discount:F2} AZN");
+        }
+
+        Console.WriteLine($"Ümumi məbləğ: {total:F2} AZN");
+    }
+}
