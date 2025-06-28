@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        int[] arr = { 1, 2, 2, 3, 4, 4, 5, 6, 6, 6 };
+        HashSet<int> duplicates = new HashSet<int>();
+        HashSet<int> seen = new HashSet<int>();
+
+        foreach (int num in arr)
+        {
+            if (seen.Contains(num))
+                duplicates.Add(num);
+            else
+                seen.Add(num);
+        }
+
+        Console.WriteLine("Təkrarlanan elementlər:");
+        foreach (int num in duplicates)
+        {
+            Console.WriteLine(num);
+        }
+    }
+}
