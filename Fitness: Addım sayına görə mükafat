@@ -1,0 +1,19 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Addım sayını daxil edin: ");
+        int steps = int.Parse(Console.ReadLine());
+
+        int reward = steps / 5000;
+        for (int i = 0; i < reward; i++)
+        {
+            Console.WriteLine("Mükafat qazandınız!");
+        }
+
+        if (reward == 0)
+            Console.WriteLine("Hələ mükafat yoxdur.");
+    }
+}
