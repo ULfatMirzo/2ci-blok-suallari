@@ -1,0 +1,21 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Əsas məbləği daxil edin: ");
+        double principal = double.Parse(Console.ReadLine());
+
+        Console.Write("Faiz dərəcəsi (%): ");
+        double rate = double.Parse(Console.ReadLine()) / 100;
+
+        Console.Write("Müddət (il): ");
+        int years = int.Parse(Console.ReadLine());
+
+        double total = principal + (principal * rate * years);
+        double monthly = total / (years * 12);
+
+        Console.WriteLine($"Aylıq ödəniş: {monthly:F2} AZN");
+    }
+}
