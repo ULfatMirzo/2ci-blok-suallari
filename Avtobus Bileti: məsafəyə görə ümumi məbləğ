@@ -1,0 +1,26 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Məsafəni daxil edin (km): ");
+        double distance = double.Parse(Console.ReadLine());
+
+        double baseFare = 5; // minimum haqq
+        double kmPrice = 0.2;
+
+        double totalFare;
+
+        if (distance <= 0)
+        {
+            Console.WriteLine("Məsafə 0 və ya mənfi ola bilməz!");
+            return;
+        }
+
+        // Əgər məsafə 0 olarsa, sadəcə minimum haqq alınır.
+        totalFare = baseFare + (distance * kmPrice);
+
+        Console.WriteLine($"Ümumi məbləğ: {totalFare:F2} AZN");
+    }
+}
