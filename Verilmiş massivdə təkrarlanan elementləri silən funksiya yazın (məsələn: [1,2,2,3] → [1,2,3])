@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static int[] RemoveDuplicates(int[] arr)
+    {
+        HashSet<int> unique = new HashSet<int>(arr);
+        int[] result = new int[unique.Count];
+        unique.CopyTo(result);
+        return result;
+    }
+
+    static void Main()
+    {
+        int[] arr = { 1, 2, 2, 3, 4, 4, 5 };
+        int[] uniqueArr = RemoveDuplicates(arr);
+
+        Console.WriteLine("Təkrarlanmayan elementlər:");
+        foreach (int num in uniqueArr)
+        {
+            Console.Write(num + " ");
+        }
+    }
+}
