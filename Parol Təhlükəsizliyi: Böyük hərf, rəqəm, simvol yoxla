@@ -1,0 +1,24 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Parolu daxil edin: ");
+        string password = Console.ReadLine();
+
+        bool hasUpper = false, hasDigit = false, hasSymbol = false;
+
+        foreach (char c in password)
+        {
+            if (char.IsUpper(c)) hasUpper = true;
+            else if (char.IsDigit(c)) hasDigit = true;
+            else if (!char.IsLetterOrDigit(c)) hasSymbol = true;
+        }
+
+        if (hasUpper && hasDigit && hasSymbol)
+            Console.WriteLine("Parol təhlükəsizdir.");
+        else
+            Console.WriteLine("Parol zəifdir! Ən azı 1 böyük hərf, 1 rəqəm və 1 simvol olmalıdır.");
+    }
+}
